@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en"> 
+<head>
+ <meta http-equiv="Content-Type" content="text/html";charset=UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Bookshelf App</title>
+ <link rel="stylesheet" href="style.css" />
+
+<!-- Lampirkan 'defer' jika pemanggilan dilakukan dalam <head> -->
+<script defer src="main.js"></script>
+</head>
+<body>
+ <header class="head_bar">
+ <h1 class="head_bar_title">Bockshelf Aap</hl>
+</header>
+
+<main>
+ <section class="input_section">
+  <h2>Tambah Buku Baru</h2>
+  <form id="bookForm" data-testid="bookForm">
+    <div class="input">
+        <label for="bookFormTitle">Judul</label>
+        <input
+        id="bookFormTitle"
+        type="text"
+        required
+        data-testid="bookFormTitleInput"
+        />
+     </div>
+     <div class="input">
+        <label for="bookFormAuthor">Penulis</label>
+        <input
+        id="bookFormAuthor"
+        type="text"
+        required
+        data-testid="bookFormAuthorInput"
+        />
+     </div>
+     <div class="input">
+        <label for="bookFormYear">Tahun</label>
+        <input
+        id="bookFormYear"
+        type="text"
+        required
+        data-testid="bookFormYearInput"
+        />
+     </div>
+     <div class="input_inline">
+        <label for="bookFormIsComplete">Selesai dibaca</label>
+        <input
+        id="bookFormIsComplete"
+        type="checkbox"
+        data-testid="bookFormIsCompletecheckbox"
+        />
+     </div>
+     <button
+      id="bookFormSubmit"
+      type="submit"
+      data-testid="bookFormSubmitButton"
+      >
+      Masukan Buku ke rak <span>Belum Selesai dibaca</span>
+    </button>
+  </form>
+ </section>
+ 
+ <section class="search_section">
+    <h2>Cari Buku</h2>
+    <form idn="searchBook" data-testid="searchBookForm">
+        <label for="searchBookTitle>Judul</label>
+        <input
+        id="searchBookTitle"
+        type="text"
+        data-testid="searchBookFormTitleInput"
+        >
+        <button
+         id="searchSubmit"
+         type="submit"
+         data-testid="searchBookFormSubmitButton
+        >
+         Cari
+        </button>
+    </form>
+ </section>
+
+ <section class="Book_shelf">
+    <h2>Belum Selesai dibaca</h2>
+
+    <div
+    id="incompleteBookList"
+    class="book_list"
+    data-testid="incompleteBookList"
+    >
+     <!--
+       ini adalah struktur HTML untuk masing-masing buku.
+       pastikan susunan elemen beserta atribut data-testid menyesuikan seperti contoh ini.
+     -->
+    <div data-book-id="123123123" class="book_item" data-testid="bookItem">
+        <h3 data-testid="bookItemTitle">Judul Buku 1</h3>
+        <P data-testid="bookItemAuthor">penulis:Penulis Buku 1</P>
+        <p data-testid="bookItemYear">Tahun:2030</p>
+        <div class="action">
+            <button data-testid="bookItemIsCompleteButton">
+                Selesai dibaca
+            </button>
+            <button data-testid="bookItemDeletButton">Hapus Buku</button>
+            <button data-testid="bookItemEditButton">Edit Buku</button>
+        </div>
+    </div>
+    </div>
+ </section>
+
+ <section class="Book_shelf">
+    <h2>selesai dibaca</h2>
+
+    <div
+     id="CompleteBookList"
+     class="book_list"
+     data-testid="CompleteBookList"
+     >
+     <!--
+       ini adalah struktur HTML untuk masing-masing buku.
+       pastikan susunan elemen beserta atribut data-testid menyesuikan seperti contoh ini.
+     -->
+       <div data-bookid="45645656" class="book_item" data-testid="bookitem">
+        <h3 data-testid="bookItemTitle">Judul buku 2</h3>
+        <p data-testid="bookItemAuthor">Penulis:Penulis Buku</p>
+        <p data-testid="bookItemYear">Tahun:2030</p>
+         <div class="action>
+        <button data-testid="bookItemIsCompleteButton">
+            Selesai dibaca
+        </button>
+        <button data-testid="bookItemDeleteButton">Hapus Buku</button>
+        <button data-testid="bookItemEditButton">Edit Buku</button>
+    </div>
+    </div>
+    </div>
+ </section>
+</main>
+</body>
+</html>
